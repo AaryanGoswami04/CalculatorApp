@@ -10,7 +10,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
         android:focusableInTouchMode="true"
         android:inputType="number|numberDecimal|numberSigned"
@@ -30,8 +30,8 @@
 
     <Button
         android:id="@+id/button0"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:minWidth="48dp"
         android:text="0"
@@ -40,8 +40,8 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
         android:text="2"
@@ -50,8 +50,8 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
         android:text="3"
@@ -60,8 +60,8 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:minWidth="48dp"
         android:text="4"
@@ -70,8 +70,8 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
         android:text="5"
@@ -80,8 +80,8 @@
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
         android:text="6"
@@ -90,9 +90,9 @@
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="212dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="8dp"
         android:minWidth="48dp"
         android:text="7"
@@ -101,8 +101,8 @@
 
     <Button
         android:id="@+id/button8"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
         android:text="8"
@@ -111,8 +111,8 @@
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
         android:text="9"
@@ -121,8 +121,8 @@
 
     <Button
         android:id="@+id/button10"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:minWidth="48dp"
         android:text="1"
@@ -131,8 +131,8 @@
 
     <Button
         android:id="@+id/buttonEquals"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
         android:text="="
@@ -141,8 +141,8 @@
 
     <Button
         android:id="@+id/buttonDivide"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginStart="16dp"
         android:minWidth="48dp"
         android:text="/"
@@ -151,8 +151,8 @@
 
     <Button
         android:id="@+id/buttonMultiply"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginStart="16dp"
         android:minWidth="48dp"
         android:text="*"
@@ -161,8 +161,8 @@
 
     <Button
         android:id="@+id/buttonMinus"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginStart="16dp"
         android:minWidth="48dp"
         android:text="-"
@@ -171,8 +171,8 @@
 
     <Button
         android:id="@+id/buttonPlus"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginStart="16dp"
         android:minWidth="48dp"
         android:text="+"
@@ -181,8 +181,8 @@
 
     <Button
         android:id="@+id/buttonDot"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
         android:text="."
@@ -191,43 +191,43 @@
 
     <Button
         android:id="@+id/buttonSin"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
         android:minWidth="48dp"
         android:text="sin"
-        app:layout_constraintStart_toStartOf="@+id/button0"
-        app:layout_constraintTop_toBottomOf="@+id/button0" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonDivide"
+        app:layout_constraintStart_toEndOf="@+id/buttonDivide" />
 
     <Button
         android:id="@+id/buttonCos"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
         android:text="cos"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonSin"
-        app:layout_constraintStart_toEndOf="@+id/buttonSin" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonMultiply"
+        app:layout_constraintStart_toEndOf="@+id/buttonMultiply" />
 
     <Button
         android:id="@+id/buttonTan"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
         android:text="tan"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonCos"
-        app:layout_constraintStart_toEndOf="@+id/buttonCos" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonMinus"
+        app:layout_constraintStart_toEndOf="@+id/buttonMinus" />
 
     <Button
         android:id="@+id/buttonLog"
-        android:layout_width="75dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
         android:minWidth="48dp"
         android:text="log"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonTan"
-        app:layout_constraintStart_toEndOf="@+id/buttonTan" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonPlus"
+        app:layout_constraintStart_toEndOf="@+id/buttonPlus" />
 
     <TextView
         android:id="@+id/operation"
@@ -252,6 +252,8 @@
         android:inputType="number|numberDecimal|numberSigned"
         app:layout_constraintBaseline_toBaselineOf="@+id/editTextNumberSigned"
         app:layout_constraintEnd_toStartOf="@+id/editTextNumberSigned"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="56" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
