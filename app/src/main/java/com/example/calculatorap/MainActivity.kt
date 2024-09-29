@@ -10,14 +10,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.lang.Math.toRadians
+import kotlin.math.*
 
 class MainActivity : AppCompatActivity() {
     private var result: EditText? = null
     private var newNumber: EditText? = null
     private val displayOperation by lazy {findViewById<TextView>(R.id.operation)} //another way to store widget reference
 
-    private var operand1: Double? = null
-    private var operand2: Double? = 0.0
+    private var operand1: Double? = null //operand1 can be null
+    private var operand2: Double = 0.0
     private var pendingOperation = "="
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -82,27 +84,69 @@ class MainActivity : AppCompatActivity() {
         buttonDot.setOnClickListener(listener)
 
         //Valid for binary operators: +,-,*,/,=
-        val opBinaryListener = View.OnClickListener { v->
-            val op = (v as Button).text.toString() //Clicked button's text is stored in op
-            val value = newNumber?.text.toString() //newNumber(input box)'s text is stored in value
-            if(value.isNotEmpty()){  //If no value is enetered as i/p, skip, as binary operation can't be performed
-                performOperation(value, op)
-            }
-            pendingOperation = op
+        fun getOperationListener(isBinaryOperation: Boolean): View.OnClickListener {
+            return View.OnClickListener { v ->
+                val op = (v as Button).text.toString() //Clicked button's text is stored in op
+                val value = newNumber?.text.toString() //newNumber(input box)'s text is stored in value
+                if (value.isNotEmpty() && isBinaryOperation) {  //If no value is entered as i/p, skip, as binary operation can't be performed
+                    performBinaryOperation(value, op)
+                }else if(value.isNotEmpty() && !isBinaryOperation) {  //If no value is entered as i/p, skip, as binary operation can't be performed
+                    performUnaryOperation(value, op)
+                }
+                pendingOperation = op
 
-            displayOperation.text = pendingOperation //The displayOperation textView displays the pending operation
+                displayOperation.text = pendingOperation //The displayOperation textView displays the pending operation
+                result?.setText(operand1.toString()) //Display operand1 in result box
+                newNumber?.setText("")  //After the result is displayed, clear the I/P box's text
+            }
         }
 
-        //Whenever any of the below buttons is clicked, opBinaryListener is executed
-        buttonEquals.setOnClickListener(opBinaryListener)
-        buttonPlus.setOnClickListener(opBinaryListener)
-        buttonMinus.setOnClickListener(opBinaryListener)
-        buttonMultiply.setOnClickListener(opBinaryListener)
-        buttonDivide.setOnClickListener(opBinaryListener)
-    }
-    private fun performOperation(value: String, operation: String){
-        displayOperation.text = operation
+        //1: Binary operand, 0: Unary operand
+        buttonEquals.setOnClickListener(getOperationListener(true))
+        buttonPlus.setOnClickListener(getOperationListener(true))
+        buttonMinus.setOnClickListener(getOperationListener(true))
+        buttonMultiply.setOnClickListener(getOperationListener(true))
+        buttonDivide.setOnClickListener(getOperationListener(true))
 
+        buttonSin.setOnClickListener(getOperationListener(false))
+        buttonLog.setOnClickListener(getOperationListener(false))
+        buttonCos.setOnClickListener(getOperationListener(false))
+        buttonTan.setOnClickListener(getOperationListener(false))
+
+    }
+    private fun performBinaryOperation(value: String, operation: String){
+        if(operand1 == null){ //If opr1 is null, no operand was previously entered, assign the entered value to operand1
+            operand1 = value.toDouble()
+        }
+        else{
+            operand2 = value.toDouble()
+
+            if(pendingOperation == "="){
+                pendingOperation = operation
+            }
+            when(pendingOperation){
+                "=" -> operand1 = operand2
+                "/" -> if(operand2 == 0.0) {  //division by Zero
+                            operand1 = Double.NaN
+                        }else{
+                            operand1 = operand1!! / operand2 // !! ensures operand1 is only calculated if operand1 is not null
+                        }
+                "+" -> operand1 = operand1!! + operand2
+                "-" -> operand1 = operand1!! - operand2
+                "*" -> operand1 = operand1!! * operand2
+
+            }
+        }
+
+    }
+    private fun performUnaryOperation(value: String, operation: String){
+
+        when(operation){
+            "sin" -> operand1 = sin(toRadians(value.toDouble()))
+            "cos" -> operand1 = cos(toRadians(value.toDouble()))
+            "tan" -> operand1 = tan(toRadians(value.toDouble()))
+            "log" -> if (value.toDouble() > 0) operand1 = log10(value.toDouble()) else operand1 = Double.NaN
+        }
     }
 
 }
