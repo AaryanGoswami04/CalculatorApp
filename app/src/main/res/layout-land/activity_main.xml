@@ -62,10 +62,11 @@
         android:id="@+id/button4"
         android:layout_width="72dp"
         android:layout_height="45dp"
+        android:layout_marginTop="8dp"
         android:minWidth="48dp"
         android:text="4"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="178dp" />
+        app:layout_constraintStart_toStartOf="@+id/button7"
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
 
     <Button
         android:id="@+id/button5"
@@ -249,5 +250,16 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/newNumber"
         app:layout_constraintEnd_toStartOf="@+id/newNumber"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Result:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/resultDisplay"
+        app:layout_constraintEnd_toStartOf="@+id/resultDisplay" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
