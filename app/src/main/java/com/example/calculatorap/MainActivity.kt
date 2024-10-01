@@ -68,6 +68,10 @@ class MainActivity : AppCompatActivity() {
         val buttonSin: Button = findViewById(R.id.buttonSin);
         val buttonCos: Button = findViewById(R.id.buttonCos);
         val buttonTan: Button = findViewById(R.id.buttonTan);
+        val buttonExp: Button = findViewById(R.id.buttonExp);
+        val buttonFactorial: Button = findViewById(R.id.buttonFactorial);
+        val buttonSqrt: Button = findViewById(R.id.buttonSqrt);
+       // val buttonExp: Button = findViewById(R.id.buttonExp);
 
         //The listener is designed to respond to click events on buttons.
         //When a button associated with this listener is clicked, the code within the listener's onClick method (defined by the lambda) gets executed.
@@ -112,18 +116,20 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        //1: Binary operand, 0: Unary operand
+        //1: Binary operator, 0: Unary operator
         buttonEquals.setOnClickListener(getOperationListener(true))
         buttonPlus.setOnClickListener(getOperationListener(true))
         buttonMinus.setOnClickListener(getOperationListener(true))
         buttonMultiply.setOnClickListener(getOperationListener(true))
         buttonDivide.setOnClickListener(getOperationListener(true))
+        buttonExp.setOnClickListener(getOperationListener(true))
 
         buttonSin.setOnClickListener(getOperationListener(false))
         buttonLog.setOnClickListener(getOperationListener(false))
         buttonCos.setOnClickListener(getOperationListener(false))
         buttonTan.setOnClickListener(getOperationListener(false))
-
+        buttonFactorial.setOnClickListener(getOperationListener(false))
+        buttonSqrt.setOnClickListener(getOperationListener(false))
     }
     private fun performBinaryOperation(value: Double, operation: String){
         if(operand1 == null){ //If opr1 is null, no operand was previously entered, assign the entered value to operand1
@@ -135,15 +141,15 @@ class MainActivity : AppCompatActivity() {
             }
             when(pendingOperation){
                 "=" -> operand1 = value
-                "/" -> if(value == 0.0) {  //division by Zero
-                            operand1 = Double.NaN
-                        }else{
-                            operand1 = operand1!! / value// !! ensures operand1 is only calculated if operand1 is not null
-                        }
+                "/" -> operand1 = if(value == 0.0) {  //division by Zero
+                    Double.NaN
+                }else{
+                    operand1!! / value// !! ensures operand1 is only calculated if operand1 is not null
+                }
                 "+" -> operand1 = operand1!! + value
                 "-" -> operand1 = operand1!! - value
                 "*" -> operand1 = operand1!! * value
-
+                "^"-> operand1 = operand1!!.pow(value)
             }
         }
 
@@ -154,10 +160,16 @@ class MainActivity : AppCompatActivity() {
             "sin" -> operand1 = sin(toRadians(value))
             "cos" -> operand1 = cos(toRadians(value))
             "tan" -> operand1 = tan(toRadians(value))
-            "log" -> if (value > 0) operand1 = log10(value) else operand1 = Double.NaN
+            "log" -> operand1 = if (value > 0) log10(value) else Double.NaN
+            "sqrt" -> operand1 = if (value >= 0) sqrt(value) else Double.NaN
+            "!" -> operand1 = if(value >= 0 && value == value.toInt().toDouble()) factorial(value.toInt()).toDouble() else Double.NaN
         }
     }
-
+    private fun factorial(n: Int): Long{
+        var res:Long = 1
+        for(i in 2..n) res *= i
+        return res;
+    }
     override fun onSaveInstanceState(outState: Bundle) { //To save the operand1, pending operation before activity is destroyed i.e when mode is changed from portrait to landscape
         super.onSaveInstanceState(outState)
         if(operand1 != null){ //If operand1 has a value (i.e., it's not null), it's saved into the Bundle using the key STATE_OPERAND1.

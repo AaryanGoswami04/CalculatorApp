@@ -29,7 +29,7 @@
 
     <Button
         android:id="@+id/button0"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:minWidth="48dp"
@@ -39,7 +39,7 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
@@ -49,7 +49,7 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
@@ -59,7 +59,7 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:minWidth="48dp"
@@ -69,7 +69,7 @@
 
     <Button
         android:id="@+id/button5"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
@@ -79,7 +79,7 @@
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
@@ -89,9 +89,9 @@
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="16dp"
         android:minWidth="48dp"
         android:text="7"
@@ -100,7 +100,7 @@
 
     <Button
         android:id="@+id/button8"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
@@ -110,7 +110,7 @@
 
     <Button
         android:id="@+id/button9"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
@@ -120,7 +120,7 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:minWidth="48dp"
@@ -130,7 +130,7 @@
 
     <Button
         android:id="@+id/buttonEquals"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
@@ -140,7 +140,7 @@
 
     <Button
         android:id="@+id/buttonDivide"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:minWidth="48dp"
@@ -150,7 +150,7 @@
 
     <Button
         android:id="@+id/buttonMultiply"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:minWidth="48dp"
@@ -160,7 +160,7 @@
 
     <Button
         android:id="@+id/buttonMinus"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:minWidth="48dp"
@@ -170,7 +170,7 @@
 
     <Button
         android:id="@+id/buttonPlus"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:minWidth="48dp"
@@ -180,7 +180,7 @@
 
     <Button
         android:id="@+id/buttonDot"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
@@ -190,7 +190,7 @@
 
     <Button
         android:id="@+id/buttonSin"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:minWidth="48dp"
@@ -199,9 +199,11 @@
         app:layout_constraintStart_toStartOf="@+id/button0"
         app:layout_constraintTop_toBottomOf="@+id/button0" />
 
+
+
     <Button
         android:id="@+id/buttonCos"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
@@ -212,7 +214,7 @@
 
     <Button
         android:id="@+id/buttonTan"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:minWidth="48dp"
@@ -223,7 +225,7 @@
 
     <Button
         android:id="@+id/buttonLog"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:minWidth="48dp"
@@ -271,5 +273,48 @@
         app:layout_constraintEnd_toStartOf="@+id/resultDisplay"
         app:layout_constraintHorizontal_bias="0.64"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSqrt"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:minWidth="48dp"
+        android:text="sqrt"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/buttonSin"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSin" />
+    <Button
+        android:id="@+id/buttonFactorial"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:minWidth="48dp"
+        android:text="!"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonSqrt"
+        app:layout_constraintStart_toEndOf="@+id/buttonSqrt" />
+
+    <Button
+        android:id="@+id/buttonExp"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:minWidth="48dp"
+        android:text="^"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonFactorial"
+        app:layout_constraintStart_toEndOf="@+id/buttonFactorial" />
+
+    <Button
+        android:id="@+id/buttonNegative"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:minWidth="48dp"
+        android:text="Neg"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonExp"
+        app:layout_constraintStart_toEndOf="@+id/buttonExp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

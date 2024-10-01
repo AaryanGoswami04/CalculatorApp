@@ -255,11 +255,64 @@
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:text="Result:"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/resultDisplay"
-        app:layout_constraintEnd_toStartOf="@+id/resultDisplay" />
+        app:layout_constraintEnd_toStartOf="@+id/resultDisplay"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <Button
+        android:id="@+id/buttonSqrt"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:minWidth="48dp"
+        android:text="sqrt"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonSin"
+        app:layout_constraintStart_toEndOf="@+id/buttonSin" />
+
+    <Button
+        android:id="@+id/buttonFactorial"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:minWidth="48dp"
+        android:text="!"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonCos"
+        app:layout_constraintStart_toEndOf="@+id/buttonCos" />
+
+    <Button
+        android:id="@+id/buttonExp"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:minWidth="48dp"
+        android:text="^"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonLog"
+        app:layout_constraintStart_toEndOf="@+id/buttonLog" />
+
+    <Button
+        android:id="@+id/buttonNegative"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:minWidth="48dp"
+        android:text="Neg"
+        android:textSize="10sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonTan"
+        app:layout_constraintStart_toEndOf="@+id/buttonTan" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
